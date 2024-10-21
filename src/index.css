@@ -15,7 +15,6 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-
   line-height: 1;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -25,6 +24,7 @@ body {
 body::-webkit-scrollbar {
   width: 0;
 }
+
 img {
   border-style: none;
 }
@@ -55,11 +55,11 @@ a:link {
 
 /* COLORS */
 :root {
-  --primary-color: #1587b9;
-  --secondary-color: #6d5fde;
-  --blue: #45addb;
-  --bg-light: #9dd9f4;
+  --primary-color: #;
+  --secondary-color: #;
+  --blue: #;
+  --bg-light: #;
   --white: #fff;
   --black: #000;
-  --error-color: #e73f46;
+  --error-color: #;
 }

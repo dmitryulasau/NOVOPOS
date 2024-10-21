@@ -25,13 +25,13 @@ export default function SignInInfo() {
     },
     {
       src: "https://res.cloudinary.com/dulasau/image/upload/v1729467055/shopping_2_pjyqnk.png",
-      text: "Check Current Status of Your License",
-      alt: "Check Current Status of Your License",
+      text: "Check License Status",
+      alt: "Check License Status",
     },
     {
       src: "https://res.cloudinary.com/dulasau/image/upload/v1729467056/shopping_3_i3yooj.png",
-      text: "Explore Additional Benefits of Your License",
-      alt: "Explore Additional Benefits of Your License",
+      text: "Explore License Benefits",
+      alt: "Explore License Benefits",
     },
   ];
 
@@ -47,8 +47,10 @@ export default function SignInInfo() {
   return (
     <Card
       sx={{
-        minWidth: { xs: "350px", sm: "350px" },
-        minHeight: "330px",
+        // maxWidth: { xs: "350px", sm: "350px" },
+        width: "100%",
+        minHeight: { sm: "370px" },
+        maxHeight: { xs: "200px" },
         background: "#FFFFE0",
         borderRadius: 0,
         borderTopRightRadius: "8px",
@@ -72,6 +74,11 @@ export default function SignInInfo() {
           src={imagesAndTexts[imageIndex].src}
           alt={imagesAndTexts[imageIndex].alt}
           sx={{
+            width: { xs: "20%", sm: "100%" }, // Make the box fluid
+            height: "auto", // Maintain aspect ratio
+            maxWidth: "100%",
+            objectFit: "contain",
+
             background: "lightyellow",
 
             maxHeight: "210px",
@@ -88,7 +95,7 @@ export default function SignInInfo() {
           variant="h6"
           sx={{
             fontFamily: "'Roboto', sans-serif",
-            fontSize: "14px",
+            fontSize: "clamp(1rem, 4vw, 1.4rem)",
             fontWeight: "800",
             display: "flex",
             alignItems: "center",

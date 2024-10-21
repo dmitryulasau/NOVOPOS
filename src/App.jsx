@@ -9,6 +9,9 @@ function App() {
     <>
       <Container
         sx={{
+          maxWidth: "900px",
+          width: "100%",
+          background: "lightblue",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -17,12 +20,19 @@ function App() {
       >
         <Box
           sx={{
+            maxWidth: "700px",
+            width: "100%",
+            flex: "1 1 1",
             display: "flex",
             flexDirection: { xs: "column", sm: "row" },
           }}
         >
-          <SignInCard />
-          <SignInInfo />
+          <Box sx={{ flex: "1 1 50%" }}>
+            <SignInCard />
+          </Box>
+          <Box sx={{ flex: "1 1 50%" }}>
+            <SignInInfo />
+          </Box>
         </Box>
       </Container>
     </>

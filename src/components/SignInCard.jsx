@@ -24,12 +24,13 @@ const Card = styled(MuiCard)(({ theme }) => ({
   width: "100%",
   padding: theme.spacing(4),
   gap: theme.spacing(2),
+
   // boxShadow:
   //  "hsla(220, 30%, 5%, 0.05) 0px 5px 15px 0px, hsla(220, 25%, 10%, 0.05) 0px 15px 35px -5px",
   [theme.breakpoints.up("sm")]: {
-    width: "350px",
+    // width: "350px",
     minHeight: "370px",
-    maxHeight: "300px",
+    // maxHeight: "300px",
   },
   ...theme.applyStyles("dark", {
     boxShadow:
@@ -62,7 +63,7 @@ export default function SignInCard() {
 
     if (!email.value || !/\S+@\S+\.\S+/.test(email.value)) {
       setEmailError(true);
-      setEmailErrorMessage("Please enter a valid email address.");
+      setEmailErrorMessage("Invalid email address");
       isValid = false;
     } else {
       setEmailError(false);
@@ -71,7 +72,7 @@ export default function SignInCard() {
 
     if (!password.value || password.value.length < 6) {
       setPasswordError(true);
-      setPasswordErrorMessage("Password must be at least 6 characters long.");
+      setPasswordErrorMessage("Password too short");
       isValid = false;
     } else {
       setPasswordError(false);
@@ -82,7 +83,7 @@ export default function SignInCard() {
   };
 
   return (
-    <Card variant="outlined">
+    <Card variant="outlined" sx={{ maxHeight: { xs: "160px" } }}>
       {/* SIGN IN HEADING */}
       <Typography
         component="h1"

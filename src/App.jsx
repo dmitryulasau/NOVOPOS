@@ -33,6 +33,7 @@ function App() {
           <Box sx={{ flex: "1 1 50%" }}>
             <SignInInfo />
             {/* CHECK */}
+            {/* CHECK */}
           </Box>
         </Box>
       </Container>
